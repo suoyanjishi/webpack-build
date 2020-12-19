@@ -5,12 +5,16 @@ describe("webpack.base.js test case", () => {
 
   it("enty", () => {
     assert.equal(
-      baseConfig.entry.index,
-      "C:/Users/L/Desktop/gitlab/learn/learn-webpack/my-project/builder-webpack/test/smoke/template/src/index/index.js"
+      baseConfig.entry.index.indexOf(
+        "webpack-build/test/smoke/template/src/index/index.js"
+      ) > -1,
+      true
     );
     assert.equal(
-      baseConfig.entry.search,
-      "C:/Users/L/Desktop/gitlab/learn/learn-webpack/my-project/builder-webpack/test/smoke/template/src/search/index.js"
+      baseConfig.entry.search.indexOf(
+        "webpack-build/test/smoke/template/src/search/index.js"
+      ) > -1,
+      true
     );
   });
 });
